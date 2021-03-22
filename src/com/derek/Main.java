@@ -10,7 +10,7 @@ public class Main {
     }
 
     public String BinaryReversal(String input) {
-        String inputBinary = Integer.toBinaryString(Integer.valueOf(input));
+        String inputBinary = Integer.toBinaryString(Integer.parseInt(input));
         int inputBinaryLength = inputBinary.length();
         int leadingZero = 8 - inputBinaryLength % 8;
         StringBuilder sb = new StringBuilder();
@@ -21,7 +21,6 @@ public class Main {
             sb.append(inputBinary);
         }
         String resBinary = sb.reverse().toString();
-        String res = String.valueOf(Integer.parseInt(resBinary, 2));
-        return res;
+        return String.valueOf(Integer.parseInt(resBinary, 2));
     }
 }
